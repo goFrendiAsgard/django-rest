@@ -105,7 +105,7 @@ Lebih lanjut tentang git, silahkan ikuti [tutorial ini](https://www.w3schools.co
 
 ```bash
 source venv/bin/activate
-pip install django djangorestframework
+pip install django djangorestframework PyJWT
 ```
 
 Supaya ke depannya kita mendapatkan versi package yang sesuai dengan kode yang kita buat, kita bisa menjalankan:
@@ -120,7 +120,7 @@ Kita akan memperoleh tampilan seperti ini:
 asgiref==3.6.0
 Django==4.1.5
 djangorestframework==3.14.0
-jwt==1.3.1
+PyJWT==2.6.0
 pytz==2022.7
 sqlparse==0.4.3
 ```
@@ -132,7 +132,7 @@ Dari output yang sudah kita dapatkan, kita perlu membuat sebuah file dengan nama
 ```
 Django==4.1.5
 djangorestframework==3.14.0
-jwt==1.3.1
+PyJWT==2.6.0
 ```
 
 File `requirements.txt` perlu kita update setiap kali kita menginstall package baru.
@@ -143,7 +143,7 @@ Untuk menginstall package-package yang terdapat dalam file `requirements.txt` ki
 pip install -r requirements.txt
 ```
 
-# Scaffold proyek
+## Scaffold proyek
 
 Django menyediakan perintah untuk membuat sebuah proyek.
 
@@ -163,7 +163,7 @@ cd myproject
 python manage.py
 ```
 
-# Scaffold aplikasi
+## Scaffold aplikasi
 
 Dalam sebuah proyek, bisa terdapat beberapa aplikasi.
 
@@ -185,3 +185,12 @@ Usai menjalankan perintah di atas, kita akan mendapatkan dua directory baru di d
 
 - `accounts`
 - `notes`
+
+## Membuat model untuk aplikasi accounts
+
+## Menjalankan migrasi
+
+## Membuat view dan URL
+
+## Registrasi view dan URL
+

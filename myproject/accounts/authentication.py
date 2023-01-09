@@ -2,18 +2,20 @@ from django.conf import settings
 from rest_framework import authentication, exceptions
 import jwt
 
-from . import models
+from .models import User
 
 
 class JWTAuthentication(authentication.BaseAuthentication):
 
     def authenticate(self, request):
         token = request.COOKIES.get('jwt')
+        print(token)
         if not token:
             return None
         try:
             payload = jwt.decode(token, settings.JWT_SECRET, algorithms=['HS256'])
         except:
             raise exceptions.AuthenticationFailed('Unauthorized')
-        user = models.User.objects.filter(id=payload['id']).first()
+        user = User.objects.filter(id=payload['id']).first()
+        print(user)
         return (user, None)
