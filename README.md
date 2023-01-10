@@ -1,4 +1,4 @@
-#jApa ini
+# Apa ini
 
 Percobaan membuat aplikasi Django dengan [django-rest-framework](https://www.django-rest-framework.org/)
 
@@ -455,7 +455,7 @@ class Note(models.Model):
 
 `myproject/notes/views.py`
 
-```
+```python
 from django.shortcuts import render
 
 from rest_framework.decorators import api_view, authentication_classes, permission_classes
